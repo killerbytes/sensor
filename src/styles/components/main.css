@@ -1,0 +1,12 @@
+.sensor {
+  @apply flex flex-col p-4 bg-gray-400 rounded-lg h-32;
+  label {
+    @apply font-bold;
+  }
+  .value {
+    @apply text-4xl font-bold text-right mt-auto;
+  }
+  button {
+    @apply p-2 bg-gray-700 rounded text-white uppercase text-sm;
+  }
+}

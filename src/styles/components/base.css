@@ -1,0 +1,38 @@
+html,
+body {
+  font-size: 12px;
+  @apply h-full p-2;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+h4 {
+  @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+
+select,
+input {
+  @apply border-solid border rounded border-gray-900 text-black;
+}
+p {
+  @apply mb-4;
+}
+a {
+  @apply cursor-pointer underline;
+}
+
+hr {
+  @apply border-gray-500;
+}

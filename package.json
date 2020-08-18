@@ -6,13 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"react-scripts start\" \"npm run watch:css\"",
+    "build": "concurrently \"react-scripts build\" \"npm run build:css\"",
+    "watch:css": "gulp watch",
+    "build:css": "gulp",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,5 +33,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-tailwind": "^0.2.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "prettier": "^2.0.5",
+    "tailwindcss": "^1.6.2"
   }
 }
